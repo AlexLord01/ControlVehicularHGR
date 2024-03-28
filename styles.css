@@ -1,0 +1,108 @@
+html, body {
+    width: 1080px;
+    height: 3840px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Background.png');
+    background-size: cover; /* Para cubrir toda la ventana del navegador */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+select, input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px; /* Aumenta el tamaño del padding para mejorar la usabilidad en dispositivos móviles */
+    margin: 5px 0; /* Ajusta el margen para espaciar los elementos */
+}
+
+#vehiculo, #salida, #documentacion {
+    margin-bottom: 20px;
+}
+
+select, input {
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+}
+
+td {
+    cursor: pointer;
+}
+
+.gauge {
+  width: 450px;
+  height: 450px;
+  background: url('medidor.png') no-repeat;
+  background-position: center bottom;
+  background-size: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.fuel-tank {
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+.needle {
+  position: absolute;
+  width: 2px;
+  height: 70%; /* Ajusta la altura de la aguja */
+  background-color: red;
+  bottom: 0; /* Ajusta la posición inicial para que la aguja comience desde la parte inferior */
+  left: 50%;
+  transform-origin: bottom center; /* Cambia el origen de la transformación a la parte inferior */
+  transform: translateX(-50%) rotate(0deg); /* Mantiene la aguja centrada horizontalmente */
+}
+
+
+.slider-container {
+  margin-top: 20px;
+}
+
+.level {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.level span {
+  display: none;
+}
+
+.canvas-container {
+    border: 1px solid #ccc;
+    width: 400px;
+    height: 200px;
+}
+

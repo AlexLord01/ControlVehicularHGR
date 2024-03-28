@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Vehicular</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div id="vehiculo">
+            <h2>Vehículo</h2>
+            <select id="selectVehiculo" onchange="mostrarInfo()">
+                <option value="">Selecciona un vehículo</option>
+                <option value="caddy">Caddy</option>
+                <option value="saveiro">Saveiro</option>
+                <option value="ram">RAM</option>
+                <option value="silverado">Silverado</option>
+            </select>
+            <div id="infoVehiculo"></div>
+        </div>
+        <div id="salida">
+            <h2>Salida</h2> 
+            <label for="fechaSalida">Fecha de salida:</label>
+            <input type="date" id="fechaSalida">
+            <label for="horaSalida">Hora de salida:</label>
+            <input type="time" id="horaSalida">
+        </div>
+        <div id="documentacion">
+            <h2>Documentación del Vehículo</h2>
+            <table>
+                <tr>
+                    <th>Documento</th>
+                    <th><center>Si</th><center>
+                    <th><center>No</th><center>
+                </tr>
+                <tr>
+                    <td>Copia de Tarjeta de circulación</td>
+                    <td><input type="radio" name="tarjetaCirculacion" value="si"></td>
+                    <td><input type="radio" name="tarjetaCirculacion" value="no"></td>
+                </tr>
+                <tr>
+                    <td>Papeles del Seguro</td>
+                    <td><input type="radio" name="papelesSeguro" value="si"></td>
+                    <td><input type="radio" name="papelesSeguro" value="no"></td>
+                </tr>
+                <tr>
+                    <td>Copia de Tarjeta de Verificación</td>
+                    <td><input type="radio" name="tarjetaVerificacion" value="si"></td>
+                    <td><input type="radio" name="tarjetaVerificacion" value="no"></td>
+                </tr>
+            </table>
+            <div id="categorias">
+                <h2>Categorías y Condiciones Generales del Vehículo</h2>
+                <table>
+                    <tr>
+                        <th>Interiores</th>
+                        <th><center>Si</th><center>
+                        <th><center>No</th><center>
+                    </tr>
+                    <tr>
+                        <td>Instrumentos del Tablero</td>
+                        <td><input type="radio" name="instrumentosTablero" value="si"></td>
+                        <td><input type="radio" name="instrumentosTablero" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Calefacción</td>
+                        <td><input type="radio" name="calefaccion" value="si"></td>
+                        <td><input type="radio" name="calefaccion" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Limpiadores (Plumas)</td>
+                        <td><input type="radio" name="limpiadoresPlumas" value="si"></td>
+                        <td><input type="radio" name="limpiadoresPlumas" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Radio</td>
+                        <td><input type="radio" name="radio" value="si"></td>
+                        <td><input type="radio" name="radio" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Bocinas</td>
+                        <td><input type="radio" name="bocinas" value="si"></td>
+                        <td><input type="radio" name="bocinas" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Encendedor</td>
+                        <td><input type="radio" name="encendedor" value="si"></td>
+                        <td><input type="radio" name="encendedor" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Espejo Retrovisor</td>
+                        <td><input type="radio" name="espejoRetrovisor" value="si"></td>
+                        <td><input type="radio" name="espejoRetrovisor" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Ceniceros</td>
+                        <td><input type="radio" name="ceniceros" value="si"></td>
+                        <td><input type="radio" name="ceniceros" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Cinturones</td>
+                        <td><input type="radio" name="cinturones" value="si"></td>
+                        <td><input type="radio" name="cinturones" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Botones Interiores</td>
+                        <td><input type="radio" name="botonesInteriores" value="si"></td>
+                        <td><input type="radio" name="botonesInteriores" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Manijas Interiores</td>
+                        <td><input type="radio" name="manijasInteriores" value="si"></td>
+                        <td><input type="radio" name="manijasInteriores" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Tapetes</td>
+                        <td><input type="radio" name="tapetes" value="si"></td>
+                        <td><input type="radio" name="tapetes" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Vestiduras</td>
+                        <td><input type="radio" name="vestiduras" value="si"></td>
+                        <td><input type="radio" name="vestiduras" value="no"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="accesorios">
+                <h2>Accesorios del Vehículo</h2>
+                <table>
+                    <tr>
+                        <th>Accesorios</th>
+                        <th><center>Si</th><center>
+                        <th><center>No</th><center>
+                    </tr>
+                    <tr>
+                        <td>Gato</td>
+                        <td><input type="radio" name="gato" value="si"></td>
+                        <td><input type="radio" name="gato" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Maneral del Gato</td>
+                        <td><input type="radio" name="maneralGato" value="si"></td>
+                        <td><input type="radio" name="maneralGato" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Llave de Ruedas</td>
+                        <td><input type="radio" name="llaveRuedas" value="si"></td>
+                        <td><input type="radio" name="llaveRuedas" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Estuche de Herramientas</td>
+                        <td><input type="radio" name="estucheHerramientas" value="si"></td>
+                        <td><input type="radio" name="estucheHerramientas" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Llanta de Refacción</td>
+                        <td><input type="radio" name="llantaRefaccion" value="si"></td>
+                        <td><input type="radio" name="llantaRefaccion" value="no"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="conductores">
+                <h2>Conductores</h2>
+                <table>
+                    <tr>
+                        <th>Nombre del Conductor</th>
+                        <th>Número de Licencia</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="selectConductor" onchange="mostrarNumeroLicencia()">
+                                <option value="">Selecciona un conductor</option>
+                                <option value="Carlos">Carlos</option>
+                                <option value="Antonio">Antonio</option>
+                                <option value="Guillermo">Guillermo</option>
+                            </select>
+                        </td>
+                        <td><span id="numeroLicencia"></span></td>
+                    </tr>
+                </table>
+                    <label for="tipoRuta">Ruta:</label>
+                    <select id="tipoRuta">
+                    <option value="">Selecciona una ruta</option>
+                    <option value="local">Local</option>
+                    <option value="foranea">Foránea</option>
+                    </select>
+                </div>
+            <div id="acompanantes">
+             <h2>Nombre de Acompañantes (En caso de que así lo sea)</h2>
+             <ol>
+                <li><input type="text" placeholder="Acompañante 1"></li>
+                <li><input type="text" placeholder="Acompañante 2"></li>
+                <li><input type="text" placeholder="Acompañante 3"></li>
+             </ol>
+        </div>
+        <div id="kilometraje">
+            <h2>Kilometraje</h2>
+                <table>
+                <tr>
+                    <th>Kilometraje Inicial</th>
+                    <td><input type="number" id="kilometrajeInicial"></td>
+                </tr>
+                <tr>
+                    <th>Kilometraje Final</th>
+                    <td><input type="number" id="kilometrajeFinal"></td>
+                </tr>
+                </table>
+        </div>
+    </div>
+        <div id="Niveles">
+                <table>
+                    <tr>
+                        <th>Niveles Optimos</th>
+                        <th><center>Si</th><center>
+                        <th><center>No</th><center>
+                    </tr>
+                    <tr>
+                        <td>Aceite</td>
+                        <td><input type="radio" name="Aceite" value="si"></td>
+                        <td><input type="radio" name="Aceite" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Anticongelante</td>
+                        <td><input type="radio" name="Anticongelante" value="si"></td>
+                        <td><input type="radio" name="Anticongelante" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Líquido de Frenos</td>
+                        <td><input type="radio" name="Frenos" value="si"></td>
+                        <td><input type="radio" name="Frenos" value="no"></td>
+                <table>
+                    <div class="container">
+                        <center><h2>Medidor de Gasolina</h2>
+                         <div class="gauge">
+                            <div class="fuel-tank">
+                             <div class="fuel-level" id="fuelLevel"></div>
+                             <div class="needle" id="needle"></div>
+                         </div>
+                     </div>
+                     <div class="slider-container">
+                        <input type="range" min="41.7" max="84.5" value="50" id="fuelSlider">
+                    </div>
+                    <div class="level">
+
+                    <div id="observaciones">
+                        <h3>Observaciones</h3>
+                        <textarea id="textoObservaciones" rows="4" cols="50" placeholder="Escribe aquí tus observaciones/incidencias"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div id="firmaSupervisor">
+            <h2>Firma del Supervisor del Vehículo</h2>
+            <div class="canvas-container">
+                <canvas id="firmaCanvasSupervisor" width="400" height="200"></canvas>
+            </div>
+            <button id="borrarFirmaSupervisor">Borrar Firma</button>
+        </div>
+        <br>
+        <div id="firmaConductor">
+            <h2>Firma del Conductor del Vehículo</h2>
+            <div class="canvas-container">
+                <canvas id="firmaCanvasConductor" width="400" height="200"></canvas>
+            </div>
+            <button id="borrarFirmaConductor">Borrar Firma</button>
+        </div>
+        <br>
+        <h1 id="tituloGuardar">Guardar Control Vehicular</h1> 
+        <button id="botonGuardar">Guardar Información</button>
+        <button onclick="borrarFormato()">Borrar Formato</button>
+    </div>
+    <script>
+        document.getElementById("botonGuardar").addEventListener("click", function() {
+    // Obtener la fecha de salida ingresada por el usuario
+    var fechaSalida = document.getElementById("fechaSalida").value;
+
+    // Verificar si se ingresó una fecha de salida válida
+    if (fechaSalida) {
+        // Construir el nombre del archivo usando la fecha de salida y el vehículo seleccionado
+        var vehiculoSeleccionado = document.getElementById("selectVehiculo").value;
+        var fechaFormateada = fechaSalida.replaceAll("-", ""); // Eliminar guiones de la fecha
+        var nombreArchivo = vehiculoSeleccionado + "_" + fechaFormateada;
+
+        // Capturar el cuerpo del documento como una imagen
+        html2canvas(document.body, {
+            scale: window.devicePixelRatio // Conserva la calidad de la imagen
+        }).then(function(canvas) {
+            // Convertir el lienzo a una imagen en formato PNG
+            var image = canvas.toDataURL("image/png");
+
+            // Crear un lienzo para generar una nueva imagen centrada
+            var newCanvas = document.createElement('canvas');
+            newCanvas.width = canvas.width;
+            newCanvas.height = canvas.height;
+            var newCtx = newCanvas.getContext('2d');
+
+            // Dibujar la imagen capturada centrada
+            newCtx.drawImage(canvas, (newCanvas.width - canvas.width) / 2, 0);
+
+            // Convertir el lienzo modificado a una imagen en formato PNG
+            var newImage = newCanvas.toDataURL("image/png");
+
+            // Crear un enlace temporal para descargar la imagen
+            var link = document.createElement('a');
+            link.download = nombreArchivo + '.png';
+            link.href = newImage;
+            link.click();
+        });
+    } else {
+        alert("Por favor, ingresa una fecha de salida válida.");
+    }
+});
+
+        </script>
+   <script src="script.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.4/signature_pad.js" integrity="sha512-j36pYCzm3upwGd6JGq6xpdthtxcUtSf5yQJSsgnqjAsXtFT84WH8NQy9vqkv4qTV9hK782TwuHUTSwo2hRF+/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
